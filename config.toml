@@ -1,0 +1,64 @@
+# Better Terminal Configuration
+
+[window]
+width = 1200
+height = 800
+opacity = 0.95
+blur = true
+decorations = "full"
+
+[font]
+family = "Cascadia Code"
+size = 14.0
+bold_family = "Cascadia Code"
+italic_family = "Cascadia Code"
+
+[colors]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+cursor = "#f5e0dc"
+selection_background = "#585b70"
+selection_foreground = "#cdd6f4"
+
+# Normal colors
+black = "#45475a"
+red = "#f38ba8"
+green = "#a6e3a1"
+yellow = "#f9e2af"
+blue = "#89b4fa"
+magenta = "#f5c2e7"
+cyan = "#94e2d5"
+white = "#bac2de"
+
+# Bright colors
+bright_black = "#585b70"
+bright_red = "#f38ba8"
+bright_green = "#a6e3a1"
+bright_yellow = "#f9e2af"
+bright_blue = "#89b4fa"
+bright_magenta = "#f5c2e7"
+bright_cyan = "#94e2d5"
+bright_white = "#a6adc8"
+
+[cursor]
+shape = "block"
+blinking = true
+blink_interval = 500
+
+[shell]
+program = "/bin/zsh"
+args = []
+
+[scrollback]
+lines = 10000
+
+[performance]
+max_fps = 120
+gpu_preference = "high_performance"
+
+[keyboard]
+use_kitty_keyboard_protocol = true
+
+[bell]
+enabled = false
+visual = true
