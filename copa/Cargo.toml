@@ -1,0 +1,19 @@
+[package]
+name = "copa"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+authors = ["Better Terminal Contributors"]
+description = "Configuration parsing for Better Terminal"
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+toml = "0.9.2"
+dirs = "6.0.0"
+tracing = { workspace = true }
+memchr = { version = "2.7.4", default-features = false }
+simdutf8 = { version = "0.1.5", default-features = false }
+base64 = { workspace = true }
+regex = { workspace = true }
+regex-automata = "0.4.9"
+arrayvec = "0.7.6"

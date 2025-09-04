@@ -1,0 +1,66 @@
+[workspace]
+members = [
+    "better-gpu",
+    "better-pty", 
+    "better-window",
+    "better-terminal",
+    "corcovado",
+    "copa",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+authors = ["Better Terminal Contributors"]
+edition = "2021"
+license = "MIT"
+keywords = ["graphics", "terminal", "application"]
+rust-version = "1.88.0"
+repository = "https://github.com/better-terminal/better-terminal"
+homepage = "https://better-terminal.io"
+documentation = "https://github.com/better-terminal/better-terminal#readme"
+readme = "README.md"
+
+[workspace.dependencies]
+# Better Terminal modules
+better-gpu = { path = "better-gpu", version = "0.1.0" }
+better-pty = { path = "better-pty", version = "0.1.0" }
+better-window = { path = "better-window", version = "0.1.0" }
+corcovado = { path = "corcovado", version = "0.1.0" }
+copa = { path = "copa", version = "0.1.0" }
+
+# Core dependencies
+raw-window-handle = { version = "0.6.2", features = ["std"] }
+parking_lot = { version = "0.12.4", features = ["nightly", "hardware-lock-elision"] }
+rustc-hash = "2.1.1"
+smallvec = "1.15.1"
+unicode-width = { package = "unicode-width-16", version = "0.1.0" }
+base64 = "0.22.1"
+image = { version = "0.25.5", default-features = false, features = ["gif", "jpeg", "ico", "png", "pnm", "webp", "bmp"] }
+regex = "1.11.1"
+bytemuck = { version = "1.23.1", features = ["derive"] }
+serde = { version = "1.0.219", features = ["derive"] }
+wgpu = "25.0.2"
+libc = "0.2.174"
+smol_str = "0.3.2"
+futures = "0.3.31"
+bitflags = "2.9.0"
+tracing = "0.1.41"
+memmap2 = "0.9.5"
+url = "2.5.4"
+dashmap = "6.1.0"
+
+[profile.release]
+strip = "symbols"
+split-debuginfo = "packed"
+debug = "full"
+codegen-units = 1
+incremental = false
+lto = true
+panic = "abort"
+
+[profile.dev]
+split-debuginfo = "unpacked"
+lto = false
+incremental = true
+opt-level = 0
